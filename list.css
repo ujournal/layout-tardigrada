@@ -8,8 +8,8 @@ ul.list {
 }
 
 ul.list > li {
-  padding-top: var(--size-6);
-  padding-bottom: var(--size-6);
+  padding-top: var(--list-px, var(--size-6));
+  padding-bottom: var(--list-px, var(--size-6));
   border-bottom: var(--list-border-h, 1px) solid
     var(--list-border, var(--color-border));
 }

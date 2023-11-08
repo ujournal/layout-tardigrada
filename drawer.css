@@ -36,7 +36,7 @@
 
 .drawer[data-drawer-variant="modal"] {
   width: 100%;
-  max-width: calc(600px + var(--drawer-px) * 2);
+  max-width: calc(640px + var(--drawer-px) * 2);
   min-width: auto;
   height: unset;
   bottom: unset;
