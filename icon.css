@@ -1,0 +1,39 @@
+.icon {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+}
+
+.icon > *:where(img, svg) {
+  position: relative;
+  width: var(--icon-size, 1.5em);
+  height: var(--icon-size, 1.5em);
+  min-width: var(--icon-size, 1.5em);
+  min-height: var(--icon-size, 1.5em);
+  max-width: var(--icon-size, 1.5em);
+  max-height: var(--icon-size, 1.5em);
+  border-radius: var(--icon-radius, var(--radius-sm));
+  background-color: var(--icon-bg, transparent);
+  color: var(--icon-color, inherit);
+  outline-offset: -1px;
+}
+
+.icon > img {
+  border: 1px solid var(--icon-outline, transparent);
+}
+
+.icon[data-icon-badge]::after {
+  content: "";
+  position: absolute;
+  border-radius: var(--radius-full);
+  box-sizing: content-box;
+  bottom: -2px;
+  right: -2px;
+  width: calc(var(--icon-size, 1.5em) / 6 + 1px);
+  height: calc(var(--icon-size, 1.5em) / 6 + 1px);
+  background-color: var(--icon-badge-color, var(--color-accent));
+  border: 2px solid var(--icon-badge-bg, var(--color-bg));
+  transition-property: background-color, border-color;
+  will-change: background-color, border-color;
+  transition-duration: var(--duration);
+}

@@ -1,0 +1,29 @@
+details.reaction {
+  --button-px: 0;
+  --button-color: var(--color-text);
+  --button-bg: var(--color-bg-secondary);
+  --button-bg-h: var(--color-bg-secondary);
+  --button-w: var(--button-size, var(--size-8));
+}
+
+details.reaction > summary {
+  list-style: none;
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+details.reaction > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.reaction[open] > summary {
+  display: none;
+}
+
+details.reaction > section {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-full);
+  display: flex;
+  flex-flow: row;
+  gap: var(--size-1);
+}

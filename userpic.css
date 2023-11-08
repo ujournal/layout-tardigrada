@@ -1,0 +1,4 @@
+.userpic.icon {
+  --icon-radius: var(--radius-full);
+  --icon-outline: var(--color-border);
+}

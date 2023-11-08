@@ -1,0 +1,101 @@
+.layout {
+  display: flex;
+  flex-flow: column;
+  padding-top: var(--layout-header-h);
+}
+
+.layout__header {
+  --button-size: 32px;
+  --button-px: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  height: var(--layout-header-h);
+  min-height: var(--layout-header-h);
+  max-height: var(--layout-header-h);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  padding-left: var(--layout-p);
+  padding-right: var(--layout-p);
+  z-index: 2;
+}
+
+.layout__header-slot {
+  display: flex;
+  flex-flow: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.layout__body {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding-left: var(--layout-p);
+  padding-right: var(--layout-p);
+  gap: var(--layout-p);
+  align-self: center;
+}
+
+.layout__search-toggle {
+  display: none;
+}
+
+.layout__main {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--color-pad);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: var(--layout-p);
+  padding-bottom: var(--layout-p);
+  display: flex;
+  flex-flow: column;
+  gap: var(--size-4);
+}
+
+.layout__aside.drawer {
+  --drawer-px: var(--layout-aside-px, var(--layout-p));
+  --drawer-py: var(--layout-aside-py, var(--layout-p));
+  --group-gap: var(--size-5);
+  background-color: var(--color-pad);
+}
+
+.layout__footer {
+  padding: var(--layout-p);
+  display: flex;
+  justify-content: center;
+}
+
+body:has([data-drawer-toggle]:checked) .layout__main {
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 1150px) {
+  :root {
+    --layout-p: 16px;
+    --layout-aside-px: 0px;
+  }
+
+  .layout__aside.drawer {
+    position: sticky;
+    display: block;
+    z-index: unset;
+  }
+
+  [for="nav-toggle"],
+  [for="aside-toggle"] {
+    display: none !important;
+  }
+}

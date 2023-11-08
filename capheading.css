@@ -1,0 +1,15 @@
+.capheading {
+  --button-px: 0;
+  --button-py: 0;
+  --button-color-h: var(--color-text-contrast);
+  --button-color-a: var(--color-text-contrast);
+  font-size: var(--scale-fluid-00);
+  font-weight: var(--weight-medium);
+  color: var(--capheading-color, var(--color-text-caption));
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}

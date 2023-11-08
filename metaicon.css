@@ -1,0 +1,43 @@
+.metaicon.button {
+  --button-px: 0;
+  --button-size: var(--size-8);
+  --button-gap: var(--size-2);
+  --button-jc: flex-start;
+  --icon-size: var(--size-8);
+  --icon-radius: var(--radius-full);
+  --icon-bg: var(--color-bg-secondary);
+  min-width: 0;
+  font-size: var(--metaicon-fs, var(--scale-fluid-00));
+  line-height: var(--icon-lh, calc(var(--size-4) + 2px));
+}
+
+.metaicon.button > *:nth-child(2) {
+  display: flex;
+  flex-flow: column;
+  min-width: 0;
+}
+
+.metaicon.button > *:nth-child(2) > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metaicon.button > *:nth-child(2) > *:nth-child(1) {
+  color: var(--color-accent);
+  font-weight: var(--weight-medium);
+}
+
+.metaicon.button > *:nth-child(2) > *:nth-child(2) {
+  color: var(--color-text-caption);
+  transition-property: color;
+  transition-duration: var(--duration);
+}
+
+.metaicon.button:hover > *:nth-child(2) > *:is(:nth-child(1), :nth-child(2)) {
+  color: var(--button-color-h);
+}
+
+.metaicon.button[data-metaicon-variant="small"] {
+  --metaicon-fsize: var(--scale-fluid-00);
+  --icon-lheight: var(--size-4);
+}

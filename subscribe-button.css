@@ -1,0 +1,8 @@
+.subscribe-button {
+  --button-px: var(--size-3);
+  --button-size: var(--size-8);
+  --button-color: var(--color-text-secondary);
+  --button-border: var(--color-border);
+  --button-fs: var(--scale-fluid-00);
+  --button-border-h: var(--color-border);
+}

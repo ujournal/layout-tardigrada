@@ -1,0 +1,33 @@
+.tag-lookup {
+  display: flex;
+  flex-flow: column;
+  gap: var(--layout-p);
+}
+
+.tag-lookup__search {
+  border: 1px solid var(--color-input);
+  padding: 0 var(--size-2);
+  border-radius: var(--radius-sm);
+  height: var(--size-8);
+}
+
+.tag-lookup__list.tabs {
+  max-height: 40vh;
+  overflow: auto;
+  border-top: 1px solid var(--color-border);
+  margin-left: calc(-1 * var(--layout-p));
+  margin-right: calc(-1 * var(--layout-p));
+  margin-bottom: calc(-1 * var(--layout-p));
+  padding: var(--layout-p);
+}
+
+.tag-lookup__list .button > *:first-child {
+  --icon-color: var(--color-text-caption);
+}
+
+.tag-lookup__list .button > *:last-child {
+  --icon-bg: none;
+  --icon-color: var(--color-text-caption);
+  margin-left: auto;
+}
+

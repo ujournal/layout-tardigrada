@@ -1,0 +1,24 @@
+.post-form {
+}
+
+.post-form__drawer {
+  height: auto;
+  overflow: visible;
+  padding: 0;
+}
+
+.post-form__header {
+  padding: var(--size-2) var(--drawer-px);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-form__body {
+  padding: var(--layout-p) var(--drawer-px);
+  max-height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

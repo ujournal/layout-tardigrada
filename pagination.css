@@ -1,0 +1,32 @@
+ul.pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  gap: var(--size-2);
+}
+
+ul.pagination > li > * {
+  padding: var(--size-2);
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  border: 1px solid var(--pagination-border, var(--color-border));
+  border-radius: var(--radius-full);
+  transition: border-color var(--duration);
+  color: var(--pagination-color, inherit);
+}
+
+ul.pagination > li.disabled {
+  opacity: 0.5;
+}
+
+ul.pagination > li:first-child {
+  flex: 1;
+}
+
+ul.pagination > li:last-child {
+  flex: 3;
+}

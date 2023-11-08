@@ -1,0 +1,41 @@
+ul.tabs {
+  --button-jc: flex-start;
+  --button-color: var(--color-text-secondary);
+  --button-bg-h: var(--color-bg-secondary);
+  --button-px: var(--size-2);
+  --button-radius: var(--radius-sm);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  gap: var(--tabs-gap, var(--size-2));
+}
+
+ul.tabs[data-tabs-variant="horizontal"] {
+}
+
+ul.tabs[data-tabs-variant="vertical"] {
+  --button-px: var(--size-1);
+  flex-flow: column;
+}
+
+ul.tabs > li {
+  display: flex;
+  flex-flow: row;
+  justify-content: stretch;
+  align-items: center;
+  gap: var(--size-1);
+  color: var(--color-text-secondary);
+}
+
+ul.tabs > li > *:first-child {
+  flex: 1;
+}
+
+ul.tabs > li[data-current] {
+  --button-color: var(--color-accent);
+  --button-bg: var(--color-bg-secondary);
+  position: relative;
+}

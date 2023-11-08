@@ -1,0 +1,12 @@
+.search-drawer.drawer {
+  height: auto;
+  min-height: auto;
+  display: flex;
+  flex-flow: column;
+  gap: var(--layout-p);
+  overflow: hidden;
+}
+
+.search-drawer.drawer > .tag-lookup__list.tabs {
+  max-height: 100%;
+}

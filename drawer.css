@@ -1,0 +1,106 @@
+[data-drawer-toggle] {
+  display: none;
+}
+
+.drawer {
+  position: fixed;
+  top: var(--layout-header-h);
+  bottom: 0;
+  padding-top: var(--drawer-py);
+  padding-bottom: var(--drawer-py);
+  padding-left: var(--drawer-px);
+  padding-right: var(--drawer-px);
+  width: calc(var(--drawer-w) + var(--drawer-px) * 2);
+  min-width: calc(var(--drawer-w) + var(--drawer-px) * 2);
+  max-width: calc(var(--drawer-w) + var(--drawer-px) * 2);
+  height: calc(100vh - var(--layout-header-h));
+  background-color: #fff;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  z-index: 3;
+}
+
+.drawer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.drawer[data-drawer-variant="left"] {
+  left: 0;
+}
+
+.drawer[data-drawer-variant="right"] {
+  right: 0;
+}
+
+.drawer[data-drawer-variant="modal"] {
+  width: 100%;
+  max-width: calc(600px + var(--drawer-px) * 2);
+  min-width: auto;
+  height: unset;
+  bottom: unset;
+  top: var(--layout-header-h);
+  left: 0;
+  bottom: 0;
+  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.drawer__close {
+  position: fixed;
+  top: var(--layout-p);
+  right: var(--layout-p);
+  height: var(--layout-header-h);
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 3;
+  color: var(--color-text-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-8);
+  height: var(--size-8);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+/* Hide drawer itself */
+[data-drawer-toggle]:not(:checked) + .drawer {
+  display: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Drawer close button */
+[data-drawer-toggle]:not(:checked) + .drawer + .drawer__close {
+  display: none;
+}
+
+/* Block header events and events on other drawers */
+body:has([data-drawer-toggle]:checked)
+  [data-drawer-toggle]:not(:checked)
+  + .drawer,
+body:has([data-drawer-toggle]:checked + [data-drawer-variant="modal"])
+  .layout__header {
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 618px) {
+  /* Modal drawer */
+  .drawer[data-drawer-variant="modal"] {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media (min-width: 1150px) {
+  /* Show aside drawers for large screen */
+  [data-drawer-toggle]:not(:checked) + aside.drawer {
+    display: block;
+    pointer-events: unset;
+    user-select: unset;
+  }
+}

@@ -1,0 +1,33 @@
+.comment {
+  display: flex;
+  flex-flow: column;
+  gap: var(--size-2);
+}
+
+.comment__header {
+  display: flex;
+  flex-flow: row;
+}
+
+.comment__body {
+  font-size: var(--comment-fs, var(--scale-fluid-0));
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment__body > a {
+  display: block;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.comment__footer {
+  --button-color: var(--color-text-caption);
+  --button-px: 0;
+  --button-fs: var(--scale-fluid-00);
+  --button-size: var(--size-6);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: var(--size-2);
+}

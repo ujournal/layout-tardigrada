@@ -1,0 +1,111 @@
+:root {
+  /* Colors */
+  --rgb-base: 255, 255, 255;
+  --rgb-contrast: 0, 0, 0;
+  --rgb-accent: 0, 0, 0; /* 69, 76, 143; */
+  --rgb-neutral: 57, 126, 239;
+  --rgb-positive: 39, 174, 96;
+  --rgb-negative: 235, 87, 87;
+  --rgb-attention: 242, 153, 74;
+
+  --color-base: rgba(var(--rgb-base));
+
+  /* Accent */
+
+  --color-accent: rgba(var(--rgb-accent));
+  --color-border-accent: color-mix(
+    in srgb,
+    rgba(var(--rgb-accent)) 30%,
+    rgba(var(--rgb-base))
+  );
+  --color-bg-accent: color-mix(
+    in srgb,
+    rgba(var(--rgb-accent)) 0%,
+    rgba(var(--rgb-base))
+  );
+
+  /* Neutral */
+
+  --color-neutral: rgba(var(--rgb-neutral));
+  --color-bg-neutral: color-mix(
+    in srgb,
+    rgba(var(--rgb-neutral)) 7%,
+    rgba(var(--rgb-base))
+  );
+
+  /* Positive */
+
+  --color-positive: rgba(var(--rgb-positive));
+  --color-bg-positive: color-mix(
+    in srgb,
+    rgba(var(--rgb-positive)) 7%,
+    rgba(var(--rgb-base))
+  );
+
+  /* Negative */
+
+  --color-negative: rgba(var(--rgb-negative));
+  --color-bg-negative: color-mix(
+    in srgb,
+    rgba(var(--rgb-neutral)) 7%,
+    rgba(var(--rgb-base))
+  );
+
+  /* Attention */
+  --color-attention: rgba(var(--rgb-attention));
+  --color-bg-attention: color-mix(
+    in srgb,
+    rgba(var(--rgb-attention)) 7%,
+    rgba(var(--rgb-base))
+  );
+
+  /* Pad */
+  --color-pad: rgba(var(--rgb-base));
+
+  --color-outline: var(--color-border);
+
+  --color-bg: var(--color-bg-accent);
+  --color-bg-secondary: color-mix(
+    in srgb,
+    rgba(var(--rgb-contrast)) 3%,
+    rgba(var(--rgb-base))
+  );
+
+  --color-input: color-mix(
+    in srgb,
+    rgba(var(--rgb-contrast)) 25%,
+    rgba(var(--rgb-base))
+  );
+  --color-border: color-mix(
+    in srgb,
+    rgba(var(--rgb-contrast)) 8%,
+    rgba(var(--rgb-base))
+  );
+  --color-text: color-mix(
+    in srgb,
+    rgba(var(--rgb-contrast)) 85%,
+    rgba(var(--rgb-base))
+  );
+  --color-text-secondary: color-mix(
+    in srgb,
+    rgba(var(--rgb-contrast)) 65%,
+    rgba(var(--rgb-base))
+  );
+  --color-text-caption: color-mix(
+    in srgb,
+    rgba(var(--rgb-contrast)) 30%,
+    rgba(var(--rgb-base))
+  );
+  --color-text-contrast: rgba(var(--rgb-base));
+
+  /* Link */
+
+  --link-color: var(--color-accent);
+  --link-hover: var(--color-neutral);
+
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}

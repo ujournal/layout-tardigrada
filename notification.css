@@ -1,0 +1,9 @@
+.notification {
+  color: var(--color-text);
+  background-color: var(--color-pad);
+  padding: var(--size-3);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-flow: column;
+  gap: var(--size-2);
+}

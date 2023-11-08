@@ -1,0 +1,105 @@
+/* -------------------------------------
+<form class="vote" data-vote-trend="positive">
+  <ul>
+    <li>
+      <button
+        name="action"
+        value="upvote"
+        aria-label="Upvote"
+        class="button"
+      >
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-chevron-up"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.25"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            ></path>
+            <path d="M6 15l6 -6l6 6"></path>
+          </svg>
+        </span>
+      </button>
+    </li>
+    <li aria-label="Votes">100</li>
+    <li>
+      <button
+        name="action"
+        value="downvote"
+        aria-label="Downvote"
+        class="button"
+      >
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.25"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            ></path>
+            <path d="M6 9l6 6l6 -6"></path>
+          </svg>
+        </span>
+      </button>
+    </li>
+  </ul>
+</form>
+------------------------------------- */
+
+form.vote > ul {
+  --button-px: 2px;
+  height: var(--vote-size, var(--size-7));
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  white-space: nowrap;
+  align-items: center;
+  gap: 1px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  user-select: none;
+}
+
+form.vote > ul > li:nth-child(2) {
+  font-size: var(--vote-fs, var(--scale-fluid-0));
+}
+
+form.vote[data-vote-trend="positive"] > ul > li:nth-child(2) {
+  color: var(--color-positive);
+}
+
+form.vote[data-vote-trend="neutral"] > ul > li:nth-child(2) {
+  color: var(--color-text-secondary);
+}
+
+form.vote[data-vote-trend="negative"] > ul > li:nth-child(2) {
+  color: var(--color-negative);
+}
+
+form.vote[data-vote-variant="compact"] {
+  --vote-fs: var(--scale-fluid-00);
+  --vote-size: var(--size-6);
+}

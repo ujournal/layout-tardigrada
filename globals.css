@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --layout-p: 8px;
+  --layout-header-h: 48px;
+  --layout-backdrop: rgba(0, 0, 0, 0.5);
+  --drawer-w: 240px;
+  --drawer-px: var(--layout-p);
+  --drawer-py: var(--layout-p);
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--scale-fluid-0);
+  line-height: var(--line-md);
+  color: var(--color-text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  shape-margin: 0;
+}

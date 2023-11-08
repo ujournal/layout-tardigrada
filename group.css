@@ -1,0 +1,33 @@
+.group {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  gap: var(--group-gap, var(--size-4));
+}
+
+.group[data-group-variant="horizontal"] {
+  /* */
+}
+
+.group[data-group-variant="vertical"] {
+  flex-flow: column;
+}
+
+.group[data-group-gap="xs"] {
+  --group-gap: var(--size-1);
+}
+
+.group[data-group-gap="sm"] {
+  --group-gap: var(--size-2);
+}
+
+.group[data-group-gap="md"] {
+  --group-gap: var(--size-4);
+}
+
+.group[data-group-gap="lg"] {
+  --group-gap: var(--size-6);
+}

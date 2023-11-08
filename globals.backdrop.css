@@ -1,0 +1,28 @@
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: var(--layout-header-h);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s;
+  z-index: 2;
+}
+
+body:has([data-drawer-toggle]:checked) {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body:has([data-drawer-toggle]:checked)::after {
+  background-color: var(--layout-backdrop);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body:has([data-drawer-toggle]:checked + [data-drawer-variant="modal"])::after {
+  top: 0;
+}

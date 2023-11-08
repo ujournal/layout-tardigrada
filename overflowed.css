@@ -1,0 +1,14 @@
+.overflowed {
+  display: flex;
+  flex-flow: row;
+  overflow: hidden;
+  align-items: center;
+}
+
+.overflowed > * {
+  margin-right: calc(-1 * var(--icon-size, var(--size-6)) / 2);
+}
+
+.overflowed > *:last-child {
+  margin-right: 0;
+}

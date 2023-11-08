@@ -1,0 +1,9 @@
+.search-form {
+  display: flex;
+  flex-flow: row;
+  gap: var(--size-2);
+}
+
+.search-form__input.input {
+  --input-size: var(--size-10);
+}

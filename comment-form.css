@@ -1,0 +1,25 @@
+.comment-form {
+  display: flex;
+  flex-flow: row;
+  gap: var(--size-2);
+  align-items: center;
+}
+
+.comment-form > *:first-child {
+  --icon-size: var(--size-8);
+}
+
+.comment-form__input {
+  width: 100%;
+  border: 1px solid var(--color-input);
+  border-radius: var(--radius-sm);
+  padding: 0 var(--size-2);
+  height: var(--size-9);
+  background-color: var(--color-bg-secondary);
+  resize: none;
+  line-height: calc(var(--size-9) - 2px);
+}
+
+.comment-form__actions {
+  display: none;
+}

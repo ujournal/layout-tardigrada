@@ -1,0 +1,29 @@
+.input {
+  display: block;
+  width: 100%;
+  height: var(--input-size, var(--size-8));
+  min-height: var(--input-size, var(--size-8));
+  border: 1px solid var(--color-input);
+  padding-left: var(--input-pl, var(--input-px, var(--size-2)));
+  padding-right: var(--input-pr, var(--input-px, var(--size-2)));
+  border-radius: var(--input-radius, var(--radius-sm));
+  border-color: var(--input-border, var(--color-input));
+  border-width: var(--input-border-w, 1px);
+  border-style: var(--input-border-s, solid);
+  background-color: var(--input-bg, var(--color-pad));
+  font-family: var(--input-ff, var(--font-sans));
+  font-size: var(--input-fs, inherit);
+  font-weight: var(--input-weight, var(--weight-regular));
+}
+
+.input[type="datetime-local"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='1.25' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z' /%3E%3Cpath d='M16 3l0 4' /%3E%3Cpath d='M8 3l0 4' /%3E%3Cpath d='M4 11l16 0' /%3E%3Cpath d='M8 15h2v2h-2z' /%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right var(--size-1) center;
+}
+
+textarea.input {
+  padding-top: var(--size-2);
+  padding-bottom: var(--size-2);
+  line-height: var(--line-md);
+}

@@ -1,0 +1,6 @@
+.tag-button.button {
+  --button-gap: var(--tag-gap, var(--size-2));
+  --icon-outline: var(--tag-outline, var(--color-border));
+  --icon-bg: var(--tag-bg, var(--color-bg-secondary));
+  --icon-color: var(--tag-color, var(--color-text-caption));
+}

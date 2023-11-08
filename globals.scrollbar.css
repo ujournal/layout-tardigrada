@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+  height: var(--size-1);
+  width: var(--size-1);
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: var(--size-1);
+}
+
+::-webkit-scrollbar-track {
+  margin: 0;
+  border-radius: var(--size-full);
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-full);
+  border: 0px solid rgba(255, 255, 255, 0);
+  background-clip: content-box;
+  background-color: var(--color-input);
+}

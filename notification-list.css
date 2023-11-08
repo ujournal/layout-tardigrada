@@ -1,0 +1,19 @@
+.notification-list__drawer.drawer {
+  --capheading-color: var(--color-text-contrast);
+  color: var(--color-text-contrast);
+  background-color: unset;
+  padding-left: 0;
+}
+
+ul.notification-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  gap: var(--size-2);
+}
+
+ul.notification-list > li {
+}

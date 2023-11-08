@@ -1,0 +1,12 @@
+::placeholder {
+  color: var(--color-text-caption);
+  opacity: 1;
+}
+
+input,
+textares,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}

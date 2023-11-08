@@ -1,0 +1,11 @@
+.reaction-button {
+  --button-pl: var(--size-1);
+  --button-pr: var(--size-2);
+  --button-gap: var(--size-1);
+  --button-color: var(--color-text);
+  --button-bg: var(--color-bg-secondary);
+  --button-bg-h: var(--color-bg-secondary);
+  --button-color: var(--color-text-secondary);
+  --button-fs: var(--scale-fluid-00);
+  /* --button-w: var(--button-size, var(--size-8)); */
+}
