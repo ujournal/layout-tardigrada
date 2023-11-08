@@ -1,0 +1,14 @@
+form.vote-form {
+  --button-bg: var(--color-bg-secondary);
+  --button-bg-h: var(--color-bg-secondary);
+  --button-color: var(--vote-form-button, var(--color-text-secondary));
+  --button-pl: var(--size-1);
+  --button-pr: var(--size-2);
+  --button-gap: var(--size-1);
+  --button-fs: var(--vote-form-fs, var(--scale-fluid-00));
+  --icon-size: var(--vote-form-size, var(--size-7));
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: var(--size-2);
+}

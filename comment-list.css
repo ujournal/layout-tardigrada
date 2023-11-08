@@ -9,10 +9,35 @@ ul.comment-list {
 }
 
 ul.comment-list > li {
-  padding-top: var(--size-5);
+  /* padding-top: var(--size-5); */
   display: flex;
   flex-flow: column;
   gap: var(--size-2);
+  padding-top: var(--size-4);
+  padding-bottom: var(--size-4);
+  border-bottom: var(--list-border-h, 1px) solid
+    var(--list-border, var(--color-border));
+}
+
+ul.comment-list > li:last-child {
+  border-bottom: none;
+}
+
+/* ul.comment-list > li:first-child {
+  border-top: var(--list-border-h, 1px) solid
+    var(--list-border, var(--color-border));
+} */
+
+ul.comment-list ul.comment-list > li {
+  border-bottom: none;
+}
+
+ul.comment-list ul.comment-list > li:first-child {
+  border-top: none;
+}
+
+ul.comment-list ul.comment-list > li:last-child {
+  padding-bottom: 0;
 }
 
 ul.comment-list > li:first-child {
@@ -72,12 +97,13 @@ ul.comment-list ul > li.comment-list__form {
   background-color: unset;
   backdrop-filter: unset;
   border-top: unset;
-  padding-top: var(--size-5);
+  padding-top: var(--size-6);
   padding-bottom: unset;
 }
 
 ul.comment-list > li:has(+ li.comment-list__form) {
-  padding-bottom: var(--size-5);
+  padding-bottom: var(--size-6);
+  border-bottom: none;
 }
 
 ul.comment-list ul > li:has(+ li.comment-list__form) {
@@ -87,6 +113,6 @@ ul.comment-list ul > li:has(+ li.comment-list__form) {
 /* Firefox shim */
 @-moz-document url-prefix() {
   ul.comment-list > li.comment-list__form {
-    margin-top: var(--size-5);
+    margin-top: var(--size-6);
   }
 }

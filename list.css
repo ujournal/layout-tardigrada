@@ -10,9 +10,11 @@ ul.list {
 ul.list > li {
   padding-top: var(--size-6);
   padding-bottom: var(--size-6);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: var(--list-border-h, 1px) solid
+    var(--list-border, var(--color-border));
 }
 
 ul.list > li:first-child {
-  border-top: 1px solid var(--color-border);
+  border-top: var(--list-border-h, 1px) solid
+    var(--list-border, var(--color-border));
 }

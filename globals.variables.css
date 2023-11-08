@@ -78,7 +78,7 @@
   );
   --color-border: color-mix(
     in srgb,
-    rgba(var(--rgb-contrast)) 8%,
+    rgba(var(--rgb-contrast)) 9%,
     rgba(var(--rgb-base))
   );
   --color-text: color-mix(

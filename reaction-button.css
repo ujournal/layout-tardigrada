@@ -1,3 +1,97 @@
+/*
+<div
+  class="group"
+  data-group-variant="horizontal"
+  data-group-gap="sm"
+>
+  <button type="button" class="reaction-button button">
+    <span class="icon">
+      <img src="./reactions/thumb-up.png" />
+    </span>
+    123
+  </button>
+  <button type="button" class="reaction-button button">
+    <span class="icon">
+      <img src="./reactions/thumb-down.png" />
+    </span>
+    4
+  </button>
+  <button type="button" class="reaction-button button">
+    <span class="icon">
+      <img src="./reactions/angry.png" />
+    </span>
+    2
+  </button>
+  <details class="reaction">
+    <summary>
+      <span class="button">
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.25"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            ></path>
+            <path
+              d="M20.985 12.528a9 9 0 1 0 -8.45 8.456"
+            ></path>
+            <path d="M16 19h6"></path>
+            <path d="M19 16v6"></path>
+            <path d="M9 10h.01"></path>
+            <path d="M15 10h.01"></path>
+            <path
+              d="M9.5 15c.658 .64 1.56 1 2.5 1s1.842 -.36 2.5 -1"
+            ></path>
+          </svg>
+        </span>
+      </span>
+    </summary>
+    <section>
+      <button type="button" class="button">
+        <span class="icon">
+          <img src="./reactions/thumb-up.png" />
+        </span>
+      </button>
+      <button type="button" class="button">
+        <span class="icon">
+          <img src="./reactions/happy.png" />
+        </span>
+      </button>
+      <button type="button" class="button">
+        <span class="icon">
+          <img src="./reactions/wow.png" />
+        </span>
+      </button>
+      <button type="button" class="button">
+        <span class="icon">
+          <img src="./reactions/thumb-down.png" />
+        </span>
+      </button>
+      <button type="button" class="button">
+        <span class="icon">
+          <img src="./reactions/sad.png" />
+        </span>
+      </button>
+      <button type="button" class="button">
+        <span class="icon">
+          <img src="./reactions/angry.png" />
+        </span>
+      </button>
+    </section>
+  </details>
+</div>
+*/
+
 .reaction-button {
   --button-pl: var(--size-1);
   --button-pr: var(--size-2);
@@ -7,5 +101,4 @@
   --button-bg-h: var(--color-bg-secondary);
   --button-color: var(--color-text-secondary);
   --button-fs: var(--scale-fluid-00);
-  /* --button-w: var(--button-size, var(--size-8)); */
 }
