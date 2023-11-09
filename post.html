@@ -2774,7 +2774,6 @@
                         </footer>
                       </article>
                     </li>
-                    <!--
                     <li class="comment-list__form">
                       <form class="comment-form" action="#" method="post">
                         <header class="comment-form__header">
@@ -2785,22 +2784,24 @@
                             />
                           </span>
                         </header>
-                        <textarea
-                          class="comment-form__input"
-                          placeholder="Написати коментар"
-                        ></textarea>
-                        <footer class="comment-form__actions">
-                          <button
-                            type="submit"
-                            class="button"
-                            data-button-variant="neutral"
-                          >
-                            <span class="icon">Додати</span>
-                          </button>
-                        </footer>
+                        <div class="comment-form__body">
+                          <textarea
+                            class="comment-form__input"
+                            placeholder="Написати коментар"
+                            required
+                          ></textarea>
+                          <footer class="comment-form__actions">
+                            <button
+                              type="submit"
+                              class="button"
+                              data-button-variant="neutral"
+                            >
+                              <span class="icon">Додати</span>
+                            </button>
+                          </footer>
+                        </div>
                       </form>
                     </li>
-                    -->
                   </ul>
                 </li>
                 <li>
@@ -3479,19 +3480,22 @@
                         />
                       </span>
                     </header>
-                    <textarea
-                      class="comment-form__input"
-                      placeholder="Написати коментар"
-                    ></textarea>
-                    <footer class="comment-form__actions">
-                      <button
-                        type="submit"
-                        class="button"
-                        data-button-variant="neutral"
-                      >
-                        <span class="icon">Додати</span>
-                      </button>
-                    </footer>
+                    <div class="comment-form__body">
+                      <textarea
+                        class="comment-form__input"
+                        placeholder="Написати коментар"
+                        required
+                      ></textarea>
+                      <footer class="comment-form__actions">
+                        <button
+                          type="submit"
+                          class="button"
+                          data-button-variant="neutral"
+                        >
+                          <span class="icon">Додати</span>
+                        </button>
+                      </footer>
+                    </div>
                   </form>
                 </li>
               </ul>
